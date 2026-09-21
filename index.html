@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>QuickRuns - Fast Cricket Scorer & Live Ball-by-Ball Match Tracker for Android</title>
+  <meta name="title" content="QuickRuns - Fast Cricket Scorer & Live Ball-by-Ball Match Tracker for Android">
+  <meta name="description" content="QuickRuns is the ultimate fast, offline-first cricket scoring app for Android. Score Gully cricket, Box cricket, T20s & tournaments with 1-tap ball entry, instant live streaming links, PDF export, and real-time spectator view.">
+  <meta name="keywords" content="cricket scoring app, cricket scorer android, gully cricket score app, box cricket scorer, live cricket match tracker, offline cricket scoring, fast cricket scorecard, instant cricket live stream, quickruns cricket app">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="author" content="QuickRuns Team">
+  <link rel="canonical" href="https://realramesh05.github.io/quickruns/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://realramesh05.github.io/quickruns/">
+  <meta property="og:title" content="QuickRuns - Fast Cricket Scorer & Live Match Tracker">
+  <meta property="og:description" content="Score matches in 1-tap, work 100% offline, broadcast live ball-by-ball updates to WhatsApp, and export professional PDF scorecards.">
+  <meta property="og:image" content="https://realramesh05.github.io/quickruns/og-preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://realramesh05.github.io/quickruns/">
+  <meta name="twitter:title" content="QuickRuns - Fast Cricket Scorer & Live Match Tracker">
+  <meta name="twitter:description" content="Instant 1-tap cricket scoring with live spectator sharing, box cricket modes, and offline support.">
+  <meta name="twitter:image" content="https://realramesh05.github.io/quickruns/og-preview.png">
+
+  <!-- Mobile Theme Styling -->
+  <meta name="theme-color" content="#060B13">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Google Fonts & Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data for Rich Search Results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "QuickRuns - Cricket Scorer",
+        "operatingSystem": "Android",
+        "applicationCategory": "SportsApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "1280",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "description": "Lightning-fast offline cricket scoring app with live ball-by-ball spectator broadcasting, Box Cricket support, wagon wheels, and instant PDF scorecards.",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.quickruns.cricketscorer",
+        "featureList": "100% Offline Scoring, Live Ball-by-Ball Sync, Box Cricket & Gully Rules, PDF Scorecard Export, Live Viewer Presence Counter, Wagon Wheel & Run Rate Visualizer"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can I use QuickRuns without an internet connection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! QuickRuns is built offline-first. You can score complete matches without mobile data or Wi-Fi. When internet is detected, matches can be synchronized to the cloud instantly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Live Spectator Sharing work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With 1 tap, generate a shareable match link. Anyone on WhatsApp or browser can watch ball-by-ball updates live in real-time with zero delay, without needing to create an account."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does QuickRuns support Box Cricket and Custom Gully Cricket rules?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. QuickRuns allows custom overs (1 to 50), custom player counts, no-ball/wide penalty configurations, and runs-per-wicket options ideal for box and turf tournaments."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I export match scorecards to PDF or images?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, generate beautifully designed, professional match summary graphics and detailed PDF scorecards instantly to share directly to your team WhatsApp groups."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://realramesh05.github.io/quickruns/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "QuickRuns App",
+            "item": "https://realramesh05.github.io/quickruns/#features"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* CSS RESET & MODERN DESIGN TOKENS */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-dark: #060B13;
+      --bg-card: #0D1626;
+      --bg-card-hover: #121F36;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(0, 208, 156, 0.3);
+      
+      --primary: #00D09C;
+      --primary-hover: #00B386;
+      --primary-glow: rgba(0, 208, 156, 0.35);
+      
+      --accent-blue: #38BDF8;
+      --accent-gold: #FBBF24;
+      --accent-red: #F87171;
+      
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-sans);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+    }
+
+    body {
+      line-height: 1.6;
+      background: radial-gradient(circle at 50% 0%, #102138 0%, #060B13 70%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* CONTAINER & UTILS */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-primary {
+      background: rgba(0, 208, 156, 0.12);
+      border: 1px solid rgba(0, 208, 156, 0.35);
+      color: var(--primary);
+    }
+
+    .badge-live {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #EF4444;
+      animation: pulse-badge 2s infinite;
+    }
+
+    @keyframes pulse-badge {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    /* HEADER & NAVIGATION */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(6, 11, 19, 0.85);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+      color: #FFFFFF;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, #00D09C 0%, #0284C7 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 4px 16px var(--primary-glow);
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      transition: color 0.2s;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    .btn-header {
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      background: var(--primary);
+      color: #060B13;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px var(--primary-glow);
+      transition: all 0.2s ease;
+    }
+
+    .btn-header:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px var(--primary-glow);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      padding: 70px 0 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(0, 208, 156, 0.15) 0%, rgba(56, 189, 248, 0.08) 50%, transparent 70%);
+      filter: blur(80px);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 5.5vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin: 20px auto 20px;
+      max-width: 900px;
+      color: #FFFFFF;
+    }
+
+    .hero h1 span.gradient-text {
+      background: linear-gradient(135deg, #00D09C 20%, #38BDF8 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p.lead {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 36px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      sm-flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    @media (min-width: 540px) {
+      .hero-cta-group {
+        flex-direction: row;
+      }
+    }
+
+    .btn-playstore {
+      background: #FFFFFF;
+      color: #060B13;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      font-weight: 800;
+      font-size: 1.05rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.12);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-playstore:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(255, 255, 255, 0.2);
+      background: #F1F5F9;
+    }
+
+    .btn-secondary-action {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-color);
+      color: #F8FAFC;
+      padding: 14px 24px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary-action:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .social-proof {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 50px;
+    }
+
+    .rating-stars {
+      color: var(--accent-gold);
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* MOCK PHONE SCORECARD PREVIEW */
+    .phone-mockup-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      perspective: 1000px;
+    }
+
+    .phone-mockup-card {
+      background: #0B1322;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 208, 156, 0.08);
+      text-align: left;
+    }
+
+    .live-match-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 20px;
+    }
+
+    .score-summary-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+      background: rgba(18, 31, 54, 0.5);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+
+    .team-block h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+
+    .team-score {
+      font-family: var(--font-mono);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-top: 4px;
+    }
+
+    .team-overs {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .vs-tag {
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--text-dim);
+    }
+
+    .ball-ticker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 12px 0 6px;
+    }
+
+    .ball-node {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      flex-shrink: 0;
+    }
+
+    .ball-0 { background: #1E293B; color: #94A3B8; }
+    .ball-1 { background: #0F3B36; color: #34D399; }
+    .ball-4 { background: #0369A1; color: #38BDF8; font-weight: 900; }
+    .ball-6 { background: #7C2D12; color: #FB923C; font-weight: 900; box-shadow: 0 0 8px rgba(251, 146, 60, 0.4); }
+    .ball-w { background: #991B1B; color: #FCA5A5; font-weight: 900; }
+
+    /* STATS & METRICS ROW */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .metrics-bar {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .metric-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+      font-family: var(--font-mono);
+    }
+
+    .metric-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* FEATURES GRID */
+    .section-title {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      margin-top: 12px;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 8px auto 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .feature-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px 26px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+    }
+
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background: rgba(0, 208, 156, 0.1);
+      border: 1px solid rgba(0, 208, 156, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: var(--primary);
+    }
+
+    .feature-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* HOW IT WORKS SECTION */
+    .steps-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      position: relative;
+    }
+
+    @media (min-width: 768px) {
+      .steps-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      position: relative;
+    }
+
+    .step-number {
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 16px;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: var(--radius-sm);
+      background: rgba(0, 208, 156, 0.1);
+      border: 1px solid rgba(0, 208, 156, 0.2);
+    }
+
+    .step-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* COMPARISON TABLE */
+    .comparison-section {
+      padding: 80px 0;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      min-width: 620px;
+    }
+
+    .comparison-table th, .comparison-table td {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.95rem;
+    }
+
+    .comparison-table th {
+      background: rgba(18, 31, 54, 0.8);
+      font-weight: 700;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .col-highlight {
+      background: rgba(0, 208, 156, 0.05);
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .check-yes { color: var(--primary); font-weight: bold; }
+    .check-no { color: var(--accent-red); font-weight: bold; }
+
+    /* FAQ ACCORDION (Details & Summary) */
+    .faq-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    details {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    details[open] {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+    }
+
+    summary {
+      padding: 20px 24px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+      color: var(--primary);
+    }
+
+    details p {
+      padding: 0 24px 20px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* BOTTOM CTA BANNER */
+    .cta-banner {
+      background: linear-gradient(135deg, #0D2035 0%, #081220 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 50px 30px;
+      text-align: center;
+      margin: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .cta-banner p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 40px 0;
+      margin-top: auto;
+      background: #04080E;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .footer-content {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER NAVIGATION -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">
+        <div class="logo-icon">🏏</div>
+        <span>QuickRuns</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#live-sync">Live Streaming</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#comparison">Why QuickRuns</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <a href="https://play.google.com/store/apps/details?id=com.quickruns.cricketscorer" class="btn-header" target="_blank" rel="noopener">
+        <span>Download Free</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container">
+        
+        <div class="badge badge-primary">
+          <span>⚡</span> Next-Gen Cricket Scoring App
+        </div>
+
+        <h1>
+          Score Cricket Matches in <span class="gradient-text">1-Tap</span>.<br>
+          Broadcast Live with Zero Lag.
+        </h1>
+
+        <p class="lead">
+          Built for Gully Cricket, Box Cricket, Turf Matches & Tournaments. Works 100% offline with instant WhatsApp live link sharing and pro PDF scorecards.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="https://play.google.com/store/apps/details?id=com.quickruns.cricketscorer" class="btn-playstore" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3.609 1.814L13.793 12 3.61 22.186c-.366-.341-.61-.83-.61-1.39V3.204c0-.56.244-1.049.61-1.39zm11.3 11.3l2.553 2.553-11.89 6.864 9.337-9.417zm0-2.228L5.572 1.469 17.462 8.33 14.91 10.886zm1.414 1.414l3.197-1.846c.928-.536.928-1.414 0-1.95L16.323 6.7l-2.12 2.12 2.12 2.12z"/>
+            </svg>
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #475569; line-height: 1;">Get it on</div>
+              <div style="font-size: 1.1rem; line-height: 1.2;">Google Play</div>
+            </div>
+          </a>
+
+          <a href="#live-sync" class="btn-secondary-action">
+            <span>🔴 See Live Demo</span>
+          </a>
+        </div>
+
+        <div class="social-proof">
+          <div class="rating-stars">★★★★★ 4.9/5</div>
+          <span>•</span>
+          <span>10,000+ Matches Scored</span>
+          <span>•</span>
+          <span>100% Free & Fast</span>
+        </div>
+
+        <!-- LIVE INTERACTIVE MOCK SCORECARD -->
+        <div class="phone-mockup-wrapper" id="live-sync">
+          <div class="phone-mockup-card">
+            <div class="live-match-header">
+              <div>
+                <span class="badge badge-live">● LIVE SPECTATOR VIEW</span>
+                <span style="font-size: 0.85rem; color: var(--text-muted); margin-left: 10px;">Turf Championship 2026</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--accent-blue);">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                <strong id="viewerCounter">48 Live Viewers</strong>
+              </div>
+            </div>
+
+            <div class="score-summary-grid">
+              <div class="team-block">
+                <h3>Super Kings</h3>
+                <div class="team-score">142/3</div>
+                <div class="team-overs">Over: 14.2 / 20</div>
+              </div>
+              <div class="vs-tag">VS</div>
+              <div class="team-block" style="text-align: right;">
+                <h3>Royal Warriors</h3>
+                <div class="team-score" style="color: var(--text-muted);">138/8</div>
+                <div class="team-overs">20 Overs (Target: 139)</div>
+              </div>
+            </div>
+
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; display: flex; justify-content: space-between;">
+              <span>Current Over (Over 15):</span>
+              <span style="color: var(--primary); font-weight: 700;">Super Kings need 0 runs to win</span>
+            </div>
+
+            <div class="ball-ticker">
+              <div class="ball-node ball-1">1</div>
+              <div class="ball-node ball-0">0</div>
+              <div class="ball-node ball-4">4</div>
+              <div class="ball-node ball-1">1</div>
+              <div class="ball-node ball-6">6</div>
+              <div class="ball-node ball-w">W</div>
+              <div class="ball-node ball-4" style="border: 2px solid var(--primary); transform: scale(1.08);">4</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- METRICS ROW -->
+        <div class="metrics-bar">
+          <div class="metric-card">
+            <div class="metric-num">0.1s</div>
+            <div class="metric-label">1-Tap Score Logging</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">100%</div>
+            <div class="metric-label">Offline First Reliability</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">&lt; 1s</div>
+            <div class="metric-label">Live Cloud Broadcast</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">1-Click</div>
+            <div class="metric-label">PDF Scorecard Export</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CORE FEATURES SECTION -->
+    <section class="container" id="features" style="padding: 80px 24px 40px;">
+      <div class="section-title">
+        <div class="badge badge-primary">Engineered for Speed</div>
+        <h2>Everything You Need for Cricket</h2>
+        <p>No clunky menus, no slow loading times. Pure performance for serious scorers.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>1-Tap Fast Scoring</h3>
+          <p>Tap runs, extras, wickets, or no-balls in real-time. Ergonomically designed for quick single-handed scoring without missing a single delivery.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📡</div>
+          <h3>Live Web Match Link</h3>
+          <p>Generate instant shareable links for WhatsApp. Spectators and friends can follow ball-by-ball commentary and scorecards without downloading the app.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📦</div>
+          <h3>Box & Gully Cricket Modes</h3>
+          <p>Flexible rules! Custom overs from 1 to 50, custom player wickets, last man standing, and turf tournament configurations ready out of the box.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Automated Wagon Wheels</h3>
+          <p>Log boundary directions and shot locations with a simple touch. View full player strike rates, economy graphs, and fall-of-wicket timelines.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📄</div>
+          <h3>Instant PDF & Image Cards</h3>
+          <p>Export crisp, match-day summary cards and complete breakdown PDF reports to share with tournament organizers and sponsors.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔄</div>
+          <h3>Cloud Backup & Reinstall Recovery</h3>
+          <p>Seamlessly restore past matches and team squads if you switch or reinstall your phone. Never lose your cricket tournament archives.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="container" id="how-it-works" style="padding: 80px 24px;">
+      <div class="section-title">
+        <div class="badge badge-primary">3-Step Simplicity</div>
+        <h2>How QuickRuns Works</h2>
+        <p>From coin toss to trophy celebration in seconds.</p>
+      </div>
+
+      <div class="steps-wrapper">
+        <div class="step-card">
+          <div class="step-number">STEP 01</div>
+          <h3>Set Up Match</h3>
+          <p>Enter team names, choose overs (e.g. 5, 8, 10, 20 overs), select toss winner, and set your opening batsmen and bowler.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">STEP 02</div>
+          <h3>Score Ball-by-Ball</h3>
+          <p>Tap 0, 1, 2, 4, 6, Wicket, or Extras. Over changes, strike rotation, and run rate calculations are completely automated.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">STEP 03</div>
+          <h3>Share Live Link</h3>
+          <p>Send the live match URL to WhatsApp groups. Friends and team players watch real-time updates as every ball happens.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON TABLE SECTION -->
+    <section class="container comparison-section" id="comparison">
+      <div class="section-title">
+        <div class="badge badge-primary">The QuickRuns Advantage</div>
+        <h2>How We Compare</h2>
+        <p>Why thousands of cricket scorers prefer QuickRuns over complicated alternatives.</p>
+      </div>
+
+      <div class="table-container">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th class="col-highlight">QuickRuns Cricket</th>
+              <th>CricHeroes / Clunky Apps</th>
+              <th>Paper Scorebook</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>100% Offline Scoring</strong></td>
+              <td class="col-highlight"><span class="check-yes">✓ Instant & Local</span></td>
+              <td><span class="check-no">✗ Requires Heavy Internet</span></td>
+              <td><span class="check-yes">✓ Offline</span></td>
+            </tr>
+            <tr>
+              <td><strong>Live Spectator Link (No App Needed)</strong></td>
+              <td class="col-highlight"><span class="check-yes">✓ Instant WhatsApp Link</span></td>
+              <td><span class="check-no">✗ Forced App Install</span></td>
+              <td><span class="check-no">✗ Impossible</span></td>
+            </tr>
+            <tr>
+              <td><strong>Fast 1-Tap UI (No Lag)</strong></td>
+              <td class="col-highlight"><span class="check-yes">✓ Instant & Lightweight</span></td>
+              <td><span class="check-no">✗ Heavy ads & slow loading</span></td>
+              <td><span class="check-yes">✓ Fast</span></td>
+            </tr>
+            <tr>
+              <td><strong>Box & Gully Custom Rules</strong></td>
+              <td class="col-highlight"><span class="check-yes">✓ Built-in Flexibility</span></td>
+              <td><span class="check-no">✗ Rigid Pro Rules Only</span></td>
+              <td><span class="check-yes">✓ Custom</span></td>
+            </tr>
+            <tr>
+              <td><strong>Instant PDF / Graphic Export</strong></td>
+              <td class="col-highlight"><span class="check-yes">✓ Free 1-Tap Export</span></td>
+              <td><span class="check-no">✗ Paywalled / Watermarked</span></td>
+              <td><span class="check-no">✗ Manual Photo</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="container" id="faq" style="padding: 40px 24px 80px;">
+      <div class="section-title">
+        <div class="badge badge-primary">Got Questions?</div>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about scoring matches with QuickRuns.</p>
+      </div>
+
+      <div class="faq-wrapper">
+        <details open>
+          <summary>Is QuickRuns completely free to use?</summary>
+          <p>Yes, QuickRuns is completely free. You can create unlimited matches, score unlimited overs, and generate live spectator links without paying any subscription fees.</p>
+        </details>
+
+        <details>
+          <summary>Does QuickRuns work in remote cricket grounds without internet?</summary>
+          <p>Yes! QuickRuns was engineered from day one with an offline-first architecture. You can score the full match even in remote grounds without network reception. Once your device detects internet, the match data syncs automatically.</p>
+        </details>
+
+        <details>
+          <summary>Do spectators need to install the app to watch my match?</summary>
+          <p>No! When you share the live link on WhatsApp, spectators can view the full live scorecard and ball-by-ball updates directly in any web browser without logging in or downloading anything.</p>
+        </details>
+
+        <details>
+          <summary>Can I score Box Cricket or Turf Tournaments with special rules?</summary>
+          <p>Yes. You can customize overs (e.g. 4, 6, 8, 12 overs), custom player dismissals, runs-per-wicket penalty, and wide/no-ball re-bowl rules to fit any local or turf tournament.</p>
+        </details>
+
+        <details>
+          <summary>How can I recover my matches if I change or reinstall my phone?</summary>
+          <p>QuickRuns links your matches to your device cloud identity. When reinstalling on the same device or recovering via cloud sync, your match history and squads can be restored with a single tap.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA BANNER -->
+    <section class="container">
+      <div class="cta-banner">
+        <h2>Ready for the Fastest Cricket Scoring Experience?</h2>
+        <p>Download QuickRuns now on Android and upgrade your match scoring today.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.quickruns.cricketscorer" class="btn-playstore" target="_blank" rel="noopener">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.609 1.814L13.793 12 3.61 22.186c-.366-.341-.61-.83-.61-1.39V3.204c0-.56.244-1.049.61-1.39zm11.3 11.3l2.553 2.553-11.89 6.864 9.337-9.417zm0-2.228L5.572 1.469 17.462 8.33 14.91 10.886zm1.414 1.414l3.197-1.846c.928-.536.928-1.414 0-1.95L16.323 6.7l-2.12 2.12 2.12 2.12z"/>
+          </svg>
+          <div>
+            <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: #475569; line-height: 1;">Get it on</div>
+            <div style="font-size: 1.1rem; line-height: 1.2;">Google Play Store</div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 1.3rem;">🏏</span>
+        <span><strong>QuickRuns</strong> © 2026. Fast Cricket Scoring & Live Match Tracker.</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://play.google.com/store/apps/details?id=com.quickruns.cricketscorer" target="_blank" rel="noopener">Google Play</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://realramesh05.github.io/quickruns/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Live Viewer Counter Animation Demo
+    (function() {
+      var counter = document.getElementById('viewerCounter');
+      if (counter) {
+        var count = 48;
+        setInterval(function() {
+          var delta = Math.floor(Math.random() * 3) - 1;
+          count = Math.max(42, Math.min(65, count + delta));
+          counter.innerText = count + " Live Viewers";
+        }, 4000);
+      }
+    })();
+  </script>
+</body>
+</html>
